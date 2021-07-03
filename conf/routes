@@ -8,3 +8,8 @@ GET     /                                   controllers.MyController.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file                       controllers.Assets.versioned(path="/public", file: Asset)
+
+GET     /example/pathbinders/:cat           controllers.ModelInRoutesController.cat(cat: Cat)
+GET     /example/querypathbinders/age       controllers.ModelInRoutesController.age(ageRange: AgeRange)
+
+POST    /example/post                       controllers.MyController.examplePost

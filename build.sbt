@@ -22,10 +22,10 @@ lazy val microservice = (project in file("."))
     routesGenerator := InjectedRoutesGenerator
   )
 // import models to be used within app.routes
-//  .settings(
-//    routesImport ++= Seq(
-//      "model.modelName"
-//    ))
+  .settings(
+    routesImport ++= Seq(
+      "controllers._"
+    ))
 // change port using this
 //  .settings(
 //    PlayKeys.playDefaultPort := 9000,
